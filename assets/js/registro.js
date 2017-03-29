@@ -19,6 +19,7 @@ document.getElementById("signUp").addEventListener("click", function(){
   coder.push(new registroCoder(name, lastName,email, password));
   creandoDiv(coder);
   document.getElementById("form").reset()
+  window.location = "bienvenida.html"
 }else{
     var error = document.getElementById("alertError");
     error.innerText = "Todo los campos son obligatorios";
@@ -39,4 +40,15 @@ function creandoDiv(){
         contenedor.appendChild(divContenedor);
       }
     }
-}
+  }
+    /*function validateEmail(){
+    var emailRegex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+    var email = document.getElementById("email").value;
+    if(emailRegex.test(email){
+      return true;
+    }else{
+      error.innerHTML="Este campo debe tener el siguiente formato: name@domain.com"
+    }
+  }
+  validateEmail();
+}*/
